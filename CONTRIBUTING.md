@@ -5,7 +5,7 @@ Thank you for your interest in contributing to React Timedown! We welcome contri
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/react-timedown.git`
+2. Clone your fork: `git clone https://github.com/ooguzyuksel/react-timedown.git`
 3. Install dependencies: `yarn install`
 4. Create a new branch: `git checkout -b feature/your-feature-name`
 

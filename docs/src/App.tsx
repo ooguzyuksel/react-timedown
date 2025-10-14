@@ -65,7 +65,7 @@ function App() {
               <a href="#features">Features</a>
               <a href="#demo">Demo</a>
               <a href="#usage">Usage</a>
-              <a href="https://github.com/yourusername/react-timedown" target="_blank">
+              <a href="https://github.com/ooguzyuksel/react-timedown" target="_blank">
                 GitHub
               </a>
             </nav>
@@ -82,7 +82,7 @@ function App() {
             <a href="#usage" className="btn btn-primary">
               Get Started
             </a>
-            <a href="https://github.com/yourusername/react-timedown" className="btn btn-secondary">
+            <a href="https://github.com/ooguzyuksel/react-timedown" className="btn btn-secondary">
               View on GitHub
             </a>
           </div>
@@ -265,7 +265,7 @@ const { time } = useTimedown({
       <footer className="footer">
         <div className="container">
           <p>
-            Made with ❤️ | <a href="https://github.com/yourusername/react-timedown">GitHub</a> | MIT License
+            Made with ❤️ | <a href="https://github.com/ooguzyuksel/react-timedown">GitHub</a> | MIT License
           </p>
         </div>
       </footer>

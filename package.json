@@ -38,7 +38,7 @@
     "timedown-timer",
     "countdown-timer"
   ],
-  "author": "",
+  "author": "Oguzhan Yuksel <https://github.com/ooguzyuksel>",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0"
@@ -79,10 +79,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-timedown.git"
+    "url": "https://github.com/ooguzyuksel/react-timedown.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/react-timedown/issues"
+    "url": "https://github.com/ooguzyuksel/react-timedown/issues"
   },
-  "homepage": "https://github.com/yourusername/react-timedown#readme"
+  "homepage": "https://github.com/ooguzyuksel/react-timedown#readme"
 }
