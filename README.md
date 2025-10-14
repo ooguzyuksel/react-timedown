@@ -558,109 +558,11 @@ const formatted = formatTime(units, 'HH:MM:SS');
 
 ## Examples
 
-Check out the [Storybook examples](https://your-storybook-url.com) for interactive demos.
-
-Run Storybook locally:
-
-```bash
-yarn install
-yarn storybook
-```
-
-## Development
-
-```bash
-# Install dependencies
-yarn install
-
-# Run tests
-yarn test
-
-# Run tests in watch mode
-yarn test:watch
-
-# Type checking is done during build
-# yarn lint
-
-# Build the library
-yarn build
-
-# Run Storybook
-yarn storybook
-
-# Run documentation site
-yarn docs:dev
-```
-
-### Git Hooks (Husky)
-
-This project uses Husky to ensure code quality:
-
-- **Pre-commit**: Runs tests on staged files
-- **Pre-push**: Runs all tests and builds the project (which includes type checking)
-
-These hooks run automatically, but you can also skip them if needed:
-
-```bash
-# Skip hooks (not recommended)
-git commit --no-verify
-git push --no-verify
-```
-
-## Deployment
-
-This project includes configurations for deploying both documentation and Storybook:
-
-### Storybook (GitHub Pages)
-
-Storybook is automatically deployed to GitHub Pages on every push to main/master:
-
-```bash
-# Storybook will be available at:
-# https://ooguzyuksel.github.io/react-timedown
-```
-
-**Setup:**
-1. Go to repository Settings → Pages
-2. Source: GitHub Actions
-3. Push to main/master branch
-
-### Documentation Site (Netlify)
-
-The docs site is deployed to Netlify:
-
-**Via Dashboard (Recommended):**
-1. Go to [netlify.com](https://netlify.com)
-2. Click "Add new site" → "Import an existing project"
-3. Select your GitHub repository
-4. Netlify will auto-detect settings from `netlify.toml`
-5. Click "Deploy"
-
-**Via CLI:**
-```bash
-# Install Netlify CLI
-npm i -g netlify-cli
-
-# Deploy
-netlify deploy --prod
-```
-
-Your site will be live at: `https://react-timedown.netlify.app`
+Check out the [Storybook examples](https://ooguzyuksel.github.io/react-timedown/) for interactive demos and live code examples.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes and ensure tests pass
-4. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-   - Husky will automatically run pre-commit checks
-5. Push to the branch (`git push origin feature/amazing-feature`)
-   - Husky will automatically run pre-push checks (type check, tests, build)
-6. Open a Pull Request
-
-**Note**: All commits must pass type checking and tests. The CI will also run these checks on your PR.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct, development process, and how to submit pull requests.
 
 ## License
 

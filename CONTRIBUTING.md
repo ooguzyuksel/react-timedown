@@ -11,35 +11,65 @@ Thank you for your interest in contributing to React Timedown! We welcome contri
 
 ## Development Workflow
 
-### Running Tests
+### Available Commands
 
 ```bash
-# Run all tests
+# Install dependencies
+yarn install
+
+# Run tests
 yarn test
 
 # Run tests in watch mode
 yarn test:watch
-```
 
-### Running Storybook
+# Run tests with coverage
+yarn test:ci
 
-```bash
-yarn storybook
-```
-
-This will start Storybook at `http://localhost:6006`
-
-### Running Documentation Site
-
-```bash
-yarn docs:dev
-```
-
-### Building the Library
-
-```bash
+# Build the library
 yarn build
+
+# Run Storybook
+yarn storybook
+# Opens at http://localhost:6006
+
+# Build Storybook
+yarn build-storybook
+
+# Run documentation site
+yarn docs:dev
+# Opens at http://localhost:5173
+
+# Build documentation site
+yarn docs:build
 ```
+
+### Git Hooks (Husky)
+
+This project uses Husky to ensure code quality before commits and pushes:
+
+#### Pre-commit Hook
+- Runs lint-staged on staged files
+- Ensures code style consistency
+
+#### Pre-push Hook
+- Runs all tests (`yarn test`)
+- Builds the project (`yarn build`) which includes type checking
+- Ensures nothing is broken before pushing
+
+#### Skipping Hooks
+
+In rare cases where you need to skip hooks (not recommended):
+
+```bash
+# Skip pre-commit hook
+git commit --no-verify
+
+# Skip pre-push hook
+git push --no-verify
+```
+
+**Note:** CI will still run all checks on your PR, so skipping hooks locally may result in CI failures.
 
 ## Code Style
 
@@ -74,11 +104,38 @@ Types:
 
 ## Pull Request Process
 
-1. Update the README.md with details of changes if applicable
-2. Update the CHANGELOG.md with your changes
-3. Ensure all tests pass
-4. Make sure your code follows the existing style
-5. Create a pull request with a clear description of the changes
+1. **Make your changes**
+   - Write clear, concise code
+   - Add tests for new features or bug fixes
+   - Ensure all existing tests still pass
+
+2. **Update documentation** (if applicable)
+   - Update README.md for API changes
+   - Update CHANGELOG.md with your changes
+   - Add Storybook examples for new features
+
+3. **Test your changes**
+   ```bash
+   yarn test
+   yarn build
+   ```
+
+4. **Commit your changes**
+   - Follow the commit message format (see below)
+   - Husky will run pre-commit checks automatically
+
+5. **Push to your fork**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+   - Husky will run pre-push checks (tests + build)
+
+6. **Create Pull Request**
+   - Provide a clear description of changes
+   - Reference any related issues
+   - Ensure CI checks pass
+
+**Note:** All PRs must pass CI checks including tests, type checking, and build verification.
 
 ## Reporting Issues
 
