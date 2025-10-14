@@ -33,6 +33,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
 
       - name: Configure Git
@@ -74,6 +75,11 @@ jobs:
           git push origin master
           git push origin v${{ steps.bump_version.outputs.new_version }}
 
+      - name: Publish to NPM
+        run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Create Release Summary
         run: |
           echo "## 🎉 Release Created Successfully!" >> $GITHUB_STEP_SUMMARY
@@ -83,9 +89,15 @@ jobs:
           echo "- **New Version:** ${{ steps.bump_version.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Version Type:** ${{ github.event.inputs.version_type }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Completed Actions" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ **Tests**: All tests passed" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ **Build**: Package built successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ **Version**: Updated to v${{ steps.bump_version.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ **Git**: Committed and tagged" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ **NPM**: Published to NPM registry" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
           echo "The following workflows will run automatically:" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ **CI Workflow**: Tests and NPM publish" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ **Release Workflow**: Create GitHub Release" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ **Deploy Storybook**: Update Storybook" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
