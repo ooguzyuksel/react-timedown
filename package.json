@@ -1,6 +1,6 @@
 {
   "name": "@ooguzyuksel/react-timedown",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A headless, flexible timedown timer hook and component for React applications",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
