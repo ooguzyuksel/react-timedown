@@ -14,9 +14,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  viteFinal: async (config) => {
+  viteFinal: async (config, { configType }) => {
     // GitHub Pages için base path ayarı
-    config.base = process.env.NODE_ENV === 'production' ? '/react-timedown/' : '/';
+    if (configType === 'PRODUCTION') {
+      config.base = '/react-timedown/';
+    }
     return config;
   },
 };

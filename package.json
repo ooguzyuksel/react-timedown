@@ -16,7 +16,7 @@
     "test:ci": "jest --ci --coverage --maxWorkers=2",
     "lint": "tsc --noEmit --project tsconfig.json",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "NODE_ENV=production storybook build --output-dir storybook-static",
     "docs:dev": "vite --config docs/vite.config.ts",
     "docs:build": "vite build --config docs/vite.config.ts",
     "deploy:storybook": "yarn build-storybook && gh-pages -d storybook-static",
