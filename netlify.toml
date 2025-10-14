@@ -1,0 +1,33 @@
+# Netlify Configuration for React Timedown Documentation Site
+# Automatically deploys docs/ folder to Netlify
+
+[build]
+  command = "yarn docs:build"
+  publish = "docs/dist"
+
+# SPA routing - redirect all routes to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment
+[build.environment]
+  NODE_VERSION = "20"
+  YARN_VERSION = "1.22.22"
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+

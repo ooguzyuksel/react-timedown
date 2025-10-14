@@ -12,3 +12,7 @@ coverage
 storybook-static
 docs/dist
 
+# Deployment
+.vercel
+.netlify
+

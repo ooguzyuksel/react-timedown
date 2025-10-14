@@ -19,6 +19,8 @@
     "build-storybook": "storybook build",
     "docs:dev": "vite --config docs/vite.config.ts",
     "docs:build": "vite build --config docs/vite.config.ts",
+    "deploy:storybook": "yarn build-storybook && gh-pages -d storybook-static",
+    "deploy:docs": "yarn docs:build",
     "prepublishOnly": "yarn build",
     "prepare": "husky"
   },

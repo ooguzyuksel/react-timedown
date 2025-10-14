@@ -82,10 +82,16 @@ function App() {
             <a href="#usage" className="btn btn-primary">
               Get Started
             </a>
+            <a href="https://ooguzyuksel.github.io/react-timedown" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              📚 View Storybook
+            </a>
             <a href="https://github.com/ooguzyuksel/react-timedown" className="btn btn-secondary">
               View on GitHub
             </a>
           </div>
+          <p style={{ marginTop: '20px', fontSize: '14px', opacity: 0.8 }}>
+            ✨ Check out <a href="https://ooguzyuksel.github.io/react-timedown" target="_blank" rel="noopener noreferrer" style={{ color: '#38bdf8', textDecoration: 'underline' }}>interactive examples</a> in Storybook
+          </p>
         </div>
       </section>
 
@@ -132,6 +138,9 @@ function App() {
       <section id="demo" className="demo">
         <div className="container">
           <h2>Live Demo</h2>
+          <p style={{ textAlign: 'center', marginBottom: '30px', fontSize: '16px', color: '#64748b' }}>
+            Try these live examples, or explore <a href="https://ooguzyuksel.github.io/react-timedown" target="_blank" rel="noopener noreferrer" style={{ color: '#38bdf8', textDecoration: 'underline' }}>11+ interactive examples in Storybook →</a>
+          </p>
           <div className="demo-grid">
             <DemoTimedown
               title="Basic Timedown (60s)"

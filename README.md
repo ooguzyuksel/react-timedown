@@ -601,6 +601,46 @@ git commit --no-verify
 git push --no-verify
 ```
 
+## Deployment
+
+This project includes configurations for deploying both documentation and Storybook:
+
+### Storybook (GitHub Pages)
+
+Storybook is automatically deployed to GitHub Pages on every push to main/master:
+
+```bash
+# Storybook will be available at:
+# https://ooguzyuksel.github.io/react-timedown
+```
+
+**Setup:**
+1. Go to repository Settings → Pages
+2. Source: GitHub Actions
+3. Push to main/master branch
+
+### Documentation Site (Netlify)
+
+The docs site is deployed to Netlify:
+
+**Via Dashboard (Recommended):**
+1. Go to [netlify.com](https://netlify.com)
+2. Click "Add new site" → "Import an existing project"
+3. Select your GitHub repository
+4. Netlify will auto-detect settings from `netlify.toml`
+5. Click "Deploy"
+
+**Via CLI:**
+```bash
+# Install Netlify CLI
+npm i -g netlify-cli
+
+# Deploy
+netlify deploy --prod
+```
+
+Your site will be live at: `https://react-timedown.netlify.app`
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
