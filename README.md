@@ -12,7 +12,6 @@ A flexible, headless countdown timer hook and component for React applications. 
 
 - **[Interactive Examples (Storybook)](https://ooguzyuksel.github.io/react-timedown/)** - Try live examples
 - **[Documentation Site](https://react-timedown.netlify.app/)** - Complete guide
-- **[Release Guide](RELEASE.md)** - How to publish new versions
 
 ## Features
 

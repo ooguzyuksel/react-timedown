@@ -161,6 +161,81 @@ We love new ideas! When suggesting a feature:
 
 Feel free to open an issue for any questions or discussions.
 
+---
+
+## For Maintainers
+
+This section is for project maintainers who have release permissions.
+
+### Publishing a Release
+
+#### Via GitHub UI (Recommended)
+
+1. Go to [Manual Release Workflow](https://github.com/ooguzyuksel/react-timedown/actions/workflows/manual-release.yml)
+2. Click **"Run workflow"**
+3. Select version type:
+   - **patch**: Bug fix (1.0.1 → 1.0.2)
+   - **minor**: New feature (1.0.1 → 1.1.0)
+   - **major**: Breaking change (1.0.1 → 2.0.0)
+4. Click **"Run workflow"**
+
+The workflow automatically:
+- ✅ Runs all tests
+- ✅ Updates version in package.json
+- ✅ Creates git tag
+- ✅ Pushes to GitHub
+- ✅ Publishes to NPM
+- ✅ Creates GitHub Release
+
+#### Via Terminal
+
+```bash
+# Patch release (1.0.0 → 1.0.1)
+yarn release:patch
+
+# Minor release (1.0.0 → 1.1.0)
+yarn release:minor
+
+# Major release (1.0.0 → 2.0.0)
+yarn release:major
+```
+
+#### Pre-Release Checklist
+
+Before publishing:
+
+- [ ] All tests pass (`yarn test`)
+- [ ] Build succeeds (`yarn build`)
+- [ ] CHANGELOG.md updated
+- [ ] README.md is current
+- [ ] New features documented
+- [ ] Breaking changes? → Major version
+- [ ] New features? → Minor version
+- [ ] Bug fixes only? → Patch version
+
+### First-Time Setup
+
+#### NPM Token
+
+1. Go to https://www.npmjs.com/ → Account → Access Tokens
+2. "Generate New Token" → "Classic Token"
+3. Token Type: **Automation**
+4. Copy the token
+
+#### GitHub Secret
+
+1. Go to https://github.com/ooguzyuksel/react-timedown/settings/secrets/actions
+2. "New repository secret"
+3. Name: `NPM_TOKEN`
+4. Paste the NPM token
+5. "Add secret"
+
+### Monitoring
+
+- **Actions**: https://github.com/ooguzyuksel/react-timedown/actions
+- **NPM Package**: https://www.npmjs.com/package/@ooguzyuksel/react-timedown
+- **Releases**: https://github.com/ooguzyuksel/react-timedown/releases
+
 ## License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
