@@ -39,7 +39,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           npx gh-pages -d storybook-static --dotfiles
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
