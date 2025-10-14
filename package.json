@@ -22,7 +22,12 @@
     "deploy:storybook": "yarn build-storybook && gh-pages -d storybook-static --dotfiles",
     "deploy:docs": "yarn docs:build",
     "prepublishOnly": "yarn build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "version": "yarn build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "release:patch": "yarn version patch",
+    "release:minor": "yarn version minor",
+    "release:major": "yarn version major"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -87,5 +92,5 @@
   "bugs": {
     "url": "https://github.com/ooguzyuksel/react-timedown/issues"
   },
-  "homepage": "https://github.com/ooguzyuksel/react-timedown#readme"
+  "homepage": "https://ooguzyuksel.github.io/react-timedown"
 }
