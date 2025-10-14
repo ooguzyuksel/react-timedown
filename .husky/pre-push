@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 Running pre-push checks..."
+echo ""
+
+# Run all tests
+echo "🧪 Running tests..."
+yarn test --passWithNoTests
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed!"
+  exit 1
+fi
+echo "✅ Tests passed"
+echo ""
+
+# Build the project (this also does type checking via TypeScript)
+echo "🏗️  Building project..."
+yarn build
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed!"
+  exit 1
+fi
+echo "✅ Build successful"
+echo ""
+
+echo "✅ All pre-push checks passed!"
