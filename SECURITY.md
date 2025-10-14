@@ -6,6 +6,23 @@ If you discover a security vulnerability, please send an email to the maintainer
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
+## Release Permissions
+
+**Who can publish releases?**
+
+Only repository maintainers with the following permissions:
+- ✅ **Repository write access** (owner/collaborators only)
+- ✅ **NPM_TOKEN access** (stored in GitHub Secrets)
+- ✅ **Repository verification** (workflows check `github.repository`)
+
+**For fork contributors:**
+- ❌ Cannot push to main repository
+- ❌ Cannot access GitHub Secrets
+- ❌ Cannot trigger release workflows
+- ✅ Can submit Pull Requests for review
+
+This ensures that only trusted maintainers can publish to NPM and create releases.
+
 ## Security Best Practices
 
 ### For Contributors

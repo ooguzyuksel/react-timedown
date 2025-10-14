@@ -12,6 +12,7 @@ jobs:
   release:
     name: Create GitHub Release
     runs-on: ubuntu-latest
+    if: github.repository == 'ooguzyuksel/react-timedown'
     
     steps:
       - name: Checkout

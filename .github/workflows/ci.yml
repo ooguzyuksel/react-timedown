@@ -50,7 +50,10 @@ jobs:
     name: Publish to NPM
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    if: |
+      github.event_name == 'push' && 
+      startsWith(github.ref, 'refs/tags/v') &&
+      github.repository == 'ooguzyuksel/react-timedown'
 
     steps:
       - name: Checkout code
