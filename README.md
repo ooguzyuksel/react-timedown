@@ -2,8 +2,8 @@
 
 A flexible, headless countdown timer hook and component for React applications. Built with TypeScript and designed for maximum flexibility.
 
-[![npm version](https://img.shields.io/npm/v/react-timedown.svg)](https://www.npmjs.com/package/react-timedown)
-[![npm downloads](https://img.shields.io/npm/dm/react-timedown.svg)](https://www.npmjs.com/package/react-timedown)
+[![npm version](https://img.shields.io/npm/v/@ooguzyuksel/react-timedown.svg)](https://www.npmjs.com/package/@ooguzyuksel/react-timedown)
+[![npm downloads](https://img.shields.io/npm/dm/@ooguzyuksel/react-timedown.svg)](https://www.npmjs.com/package/@ooguzyuksel/react-timedown)
 [![CI](https://github.com/ooguzyuksel/react-timedown/actions/workflows/ci.yml/badge.svg)](https://github.com/ooguzyuksel/react-timedown/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/ooguzyuksel/react-timedown/branch/master/graph/badge.svg)](https://codecov.io/gh/ooguzyuksel/react-timedown)
 [![license](https://img.shields.io/npm/l/react-timedown.svg)](https://github.com/ooguzyuksel/react-timedown/blob/master/LICENSE)
@@ -26,13 +26,13 @@ A flexible, headless countdown timer hook and component for React applications. 
 ## Installation
 
 ```bash
-npm install react-timedown
+npm install @ooguzyuksel/react-timedown
 ```
 
 or
 
 ```bash
-yarn add react-timedown
+yarn add @ooguzyuksel/react-timedown
 ```
 
 ## Quick Start

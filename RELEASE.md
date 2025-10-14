@@ -102,7 +102,7 @@ https://github.com/ooguzyuksel/react-timedown/actions
 ## NPM Paket Linki
 
 Yayınlandıktan sonra:
-https://www.npmjs.com/package/react-timedown
+https://www.npmjs.com/package/@ooguzyuksel/react-timedown
 
 ## Troubleshooting
 
