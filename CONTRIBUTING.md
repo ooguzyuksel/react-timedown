@@ -230,11 +230,17 @@ Before publishing:
 4. Paste the NPM token
 5. "Add secret"
 
+### Deployment
+
+For Storybook and Documentation site deployment details, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ### Monitoring
 
 - **Actions**: https://github.com/ooguzyuksel/react-timedown/actions
 - **NPM Package**: https://www.npmjs.com/package/@ooguzyuksel/react-timedown
 - **Releases**: https://github.com/ooguzyuksel/react-timedown/releases
+- **Storybook**: https://ooguzyuksel.github.io/react-timedown/
+- **Documentation**: https://react-timedown.netlify.app/
 
 ## License
 

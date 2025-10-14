@@ -58,7 +58,7 @@ This ensures that only trusted maintainers can publish to NPM and create release
 The following files are protected and should NEVER contain secrets:
 
 - `.npmrc` - Only contains registry URLs
-- `RELEASE.md` - Only contains instructions
+- `CONTRIBUTING.md` - Only contains instructions
 - All workflow files - Use `${{ secrets.* }}` only
 
 ## Ignored Files (Sensitive Data)
