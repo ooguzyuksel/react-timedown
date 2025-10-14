@@ -21,7 +21,25 @@ Bu dokümanda `react-timedown` paketinin NPM'e nasıl yayınlanacağı açıklan
 
 ## Release Süreci
 
-### Otomatik Release (Önerilen)
+### GitHub UI üzerinden (En Kolay - Önerilen)
+
+1. GitHub repo'ya git: https://github.com/ooguzyuksel/react-timedown/actions/workflows/manual-release.yml
+2. **"Run workflow"** butonuna tıkla
+3. Version type seç:
+   - **patch**: Bug fix (1.0.1 → 1.0.2)
+   - **minor**: Yeni özellik (1.0.1 → 1.1.0)
+   - **major**: Breaking change (1.0.1 → 2.0.0)
+4. **"Run workflow"** tıkla
+
+Workflow otomatik:
+- ✅ Testleri çalıştırır
+- ✅ Version günceller
+- ✅ Tag oluşturur
+- ✅ GitHub'a push eder
+- ✅ NPM'e publish eder
+- ✅ GitHub Release oluşturur
+
+### Terminal'den Otomatik Release
 
 Paketi NPM'e yayınlamak için sadece bir git tag oluştur ve push et:
 
