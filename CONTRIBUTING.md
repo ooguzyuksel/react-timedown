@@ -230,10 +230,6 @@ Before publishing:
 4. Paste the NPM token
 5. "Add secret"
 
-### Deployment
-
-For Storybook and Documentation site deployment details, see [DEPLOYMENT.md](DEPLOYMENT.md).
-
 ### Monitoring
 
 - **Actions**: https://github.com/ooguzyuksel/react-timedown/actions
