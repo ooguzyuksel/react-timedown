@@ -80,6 +80,52 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate changelog
+        id: changelog
+        run: |
+          if [ "${{ steps.current_version.outputs.version }}" = "1.0.4" ]; then
+            echo "## 🎉 Fully Automated Release System" > CHANGELOG_RELEASE.md
+            echo "" >> CHANGELOG_RELEASE.md
+            echo "This release includes the complete automation of the release process:" >> CHANGELOG_RELEASE.md
+            echo "" >> CHANGELOG_RELEASE.md
+          fi
+          git log v${{ steps.current_version.outputs.version }}..v${{ steps.bump_version.outputs.new_version }} --pretty=format:"- %s (%h)" >> CHANGELOG_RELEASE.md || echo "- Release v${{ steps.bump_version.outputs.new_version }}" > CHANGELOG_RELEASE.md
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          cat CHANGELOG_RELEASE.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.bump_version.outputs.new_version }}
+          name: Release v${{ steps.bump_version.outputs.new_version }}
+          body: |
+            ## Changes in this release
+            
+            ${{ steps.changelog.outputs.changelog }}
+            
+            ## Installation
+            
+            ```bash
+            npm install @ooguzyuksel/react-timedown@${{ steps.bump_version.outputs.new_version }}
+            ```
+            
+            or
+            
+            ```bash
+            yarn add @ooguzyuksel/react-timedown@${{ steps.bump_version.outputs.new_version }}
+            ```
+            
+            ## Links
+            
+            - 📦 [NPM Package](https://www.npmjs.com/package/@ooguzyuksel/react-timedown/v/${{ steps.bump_version.outputs.new_version }})
+            - 📚 [Documentation](https://react-timedown.netlify.app/)
+            - 🎨 [Storybook Examples](https://ooguzyuksel.github.io/react-timedown/)
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Release Summary
         run: |
           echo "## 🎉 Release Created Successfully!" >> $GITHUB_STEP_SUMMARY
@@ -95,10 +141,10 @@ jobs:
           echo "- ✅ **Version**: Updated to v${{ steps.bump_version.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ **Git**: Committed and tagged" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ **NPM**: Published to NPM registry" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ **GitHub Release**: Created release v${{ steps.bump_version.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
           echo "The following workflows will run automatically:" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ **Release Workflow**: Create GitHub Release" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ **Deploy Storybook**: Update Storybook" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Links" >> $GITHUB_STEP_SUMMARY
