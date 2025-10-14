@@ -19,7 +19,7 @@
     "build-storybook": "NODE_ENV=production storybook build --output-dir storybook-static",
     "docs:dev": "vite --config docs/vite.config.ts",
     "docs:build": "vite build --config docs/vite.config.ts",
-    "deploy:storybook": "yarn build-storybook && gh-pages -d storybook-static",
+    "deploy:storybook": "yarn build-storybook && gh-pages -d storybook-static --dotfiles",
     "deploy:docs": "yarn docs:build",
     "prepublishOnly": "yarn build",
     "prepare": "husky"

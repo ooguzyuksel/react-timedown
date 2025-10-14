@@ -14,6 +14,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  staticDirs: ['../public'],
   viteFinal: async (config, { configType }) => {
     // GitHub Pages için base path ayarı
     if (configType === 'PRODUCTION') {
