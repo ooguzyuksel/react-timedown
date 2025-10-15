@@ -233,7 +233,7 @@ Before publishing:
 ### Monitoring
 
 - **Actions**: https://github.com/ooguzyuksel/react-timedown/actions
-- **NPM Package**: https://www.npmjs.com/package/@ooguzyuksel/react-timedown
+- **NPM Package**: https://www.npmjs.com/package/react-timedown-ui
 - **Releases**: https://github.com/ooguzyuksel/react-timedown/releases
 - **Storybook**: https://ooguzyuksel.github.io/react-timedown/
 - **Documentation**: https://react-timedown.netlify.app/

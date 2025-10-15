@@ -166,11 +166,11 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const installCode = `npm install @ooguzyuksel/react-timedown
+  const installCode = `npm install react-timedown-ui
 # or
-yarn add @ooguzyuksel/react-timedown`;
+yarn add react-timedown-ui`;
 
-  const basicUsageCode = `import { useTimedown } from 'react-timedown';
+  const basicUsageCode = `import { useTimedown } from 'react-timedown-ui';
 
 function MyTimedown() {
   const { time, start, pause, reset, isRunning } = useTimedown({
@@ -244,7 +244,7 @@ const { time } = useTimedown({
               <a href="#features">Features</a>
               <a href="#demo">Demo</a>
               <a href="#usage">Usage</a>
-              <a href="https://www.npmjs.com/package/@ooguzyuksel/react-timedown" target="_blank" rel="noopener noreferrer" className="nav-icon" title="NPM Package">
+              <a href="https://www.npmjs.com/package/react-timedown-ui" target="_blank" rel="noopener noreferrer" className="nav-icon" title="NPM Package">
                 <NpmIcon />
               </a>
               <a href="https://github.com/ooguzyuksel/react-timedown" target="_blank" rel="noopener noreferrer" className="nav-icon" title="GitHub Repository">
@@ -262,11 +262,11 @@ const { time } = useTimedown({
       <section className="hero">
         <div className="container">
           <div className="badges">
-            <a href="https://www.npmjs.com/package/@ooguzyuksel/react-timedown" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/npm/v/@ooguzyuksel/react-timedown.svg" alt="npm version" />
+            <a href="https://www.npmjs.com/package/react-timedown-ui" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/npm/v/react-timedown-ui.svg" alt="npm version" />
             </a>
-            <a href="https://www.npmjs.com/package/@ooguzyuksel/react-timedown" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/npm/dm/@ooguzyuksel/react-timedown.svg" alt="npm downloads" />
+            <a href="https://www.npmjs.com/package/react-timedown-ui" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/npm/dm/react-timedown-ui.svg" alt="npm downloads" />
             </a>
             <a href="https://github.com/ooguzyuksel/react-timedown/actions" target="_blank" rel="noopener noreferrer">
               <img src="https://github.com/ooguzyuksel/react-timedown/actions/workflows/ci.yml/badge.svg" alt="CI" />
@@ -444,7 +444,7 @@ const { time } = useTimedown({
             Made with ❤️ by <a href="https://github.com/ooguzyuksel" target="_blank" rel="noopener noreferrer">@ooguzyuksel</a>
           </p>
           <p>
-            <a href="https://github.com/ooguzyuksel/react-timedown">GitHub</a> • <a href="https://www.npmjs.com/package/@ooguzyuksel/react-timedown">NPM</a> • <a href="https://github.com/ooguzyuksel/react-timedown/blob/master/LICENSE">MIT License</a>
+            <a href="https://github.com/ooguzyuksel/react-timedown">GitHub</a> • <a href="https://www.npmjs.com/package/react-timedown-ui">NPM</a> • <a href="https://github.com/ooguzyuksel/react-timedown/blob/master/LICENSE">MIT License</a>
           </p>
         </div>
       </footer>
