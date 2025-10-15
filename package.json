@@ -1,5 +1,5 @@
 {
-  "name": "@ooguzyuksel/react-timedown",
+  "name": "react-timedown-ui",
   "version": "1.0.8",
   "description": "A headless, flexible timedown timer hook and component for React applications",
   "main": "dist/index.js",

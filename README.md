@@ -2,11 +2,11 @@
 
 A flexible, headless countdown timer hook and component for React applications. Built with TypeScript and designed for maximum flexibility.
 
-[![npm version](https://img.shields.io/npm/v/@ooguzyuksel/react-timedown.svg)](https://www.npmjs.com/package/@ooguzyuksel/react-timedown)
-[![npm downloads](https://img.shields.io/npm/dm/@ooguzyuksel/react-timedown.svg)](https://www.npmjs.com/package/@ooguzyuksel/react-timedown)
+[![npm version](https://img.shields.io/npm/v/react-timedown-ui.svg)](https://www.npmjs.com/package/react-timedown-ui)
+[![npm downloads](https://img.shields.io/npm/dm/react-timedown-ui.svg)](https://www.npmjs.com/package/react-timedown-ui)
 [![CI](https://github.com/ooguzyuksel/react-timedown/actions/workflows/ci.yml/badge.svg)](https://github.com/ooguzyuksel/react-timedown/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/ooguzyuksel/react-timedown/branch/master/graph/badge.svg)](https://codecov.io/gh/ooguzyuksel/react-timedown)
-[![license](https://img.shields.io/npm/l/react-timedown.svg)](https://github.com/ooguzyuksel/react-timedown/blob/master/LICENSE)
+[![license](https://img.shields.io/npm/l/react-timedown-ui.svg)](https://github.com/ooguzyuksel/react-timedown/blob/master/LICENSE)
 
 ## 📚 Documentation
 
@@ -26,13 +26,13 @@ A flexible, headless countdown timer hook and component for React applications. 
 ## Installation
 
 ```bash
-npm install @ooguzyuksel/react-timedown
+npm install react-timedown-ui
 ```
 
 or
 
 ```bash
-yarn add @ooguzyuksel/react-timedown
+yarn add react-timedown-ui
 ```
 
 ## Quick Start
@@ -40,7 +40,7 @@ yarn add @ooguzyuksel/react-timedown
 ### Using the Hook
 
 ```tsx
-import { useTimedown } from 'react-timedown';
+import { useTimedown } from 'react-timedown-ui';
 
 function MyTimedown() {
   const { time, start, pause, reset, isRunning } = useTimedown({
@@ -61,7 +61,7 @@ function MyTimedown() {
 ### Using the Component (Render Props)
 
 ```tsx
-import { Timedown } from 'react-timedown';
+import { Timedown } from 'react-timedown-ui';
 
 function MyTimedown() {
   return (
@@ -539,7 +539,7 @@ interface FormattedTime {
 You can also import utility functions for time conversion and formatting:
 
 ```tsx
-import { convertToSeconds, convertSecondsToUnits, formatTime } from 'react-timedown';
+import { convertToSeconds, convertSecondsToUnits, formatTime } from 'react-timedown-ui';
 
 // Convert various inputs to seconds
 const seconds1 = convertToSeconds(60); // 60
