@@ -576,4 +576,3 @@ MIT © React Timedown Contributors
 ---
 
 Made with ❤️ for the React community
-
