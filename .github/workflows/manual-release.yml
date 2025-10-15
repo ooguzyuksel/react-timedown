@@ -103,18 +103,18 @@ jobs:
             ## Installation
             
             ```bash
-            npm install @ooguzyuksel/react-timedown@${{ steps.bump_version.outputs.new_version }}
+            npm install react-timedown-ui@${{ steps.bump_version.outputs.new_version }}
             ```
-            
+
             or
-            
+
             ```bash
-            yarn add @ooguzyuksel/react-timedown@${{ steps.bump_version.outputs.new_version }}
+            yarn add react-timedown-ui@${{ steps.bump_version.outputs.new_version }}
             ```
             
             ## Links
             
-            - 📦 [NPM Package](https://www.npmjs.com/package/@ooguzyuksel/react-timedown/v/${{ steps.bump_version.outputs.new_version }})
+            - 📦 [NPM Package](https://www.npmjs.com/package/react-timedown-ui/v/${{ steps.bump_version.outputs.new_version }})
             - 📚 [Documentation](https://react-timedown.netlify.app/)
             - 🎨 [Storybook Examples](https://ooguzyuksel.github.io/react-timedown/)
           draft: false
@@ -144,7 +144,7 @@ jobs:
           echo "- ✅ **Deploy Storybook**: Update Storybook" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Links" >> $GITHUB_STEP_SUMMARY
-          echo "- [NPM Package](https://www.npmjs.com/package/@ooguzyuksel/react-timedown)" >> $GITHUB_STEP_SUMMARY
+          echo "- [NPM Package](https://www.npmjs.com/package/react-timedown-ui)" >> $GITHUB_STEP_SUMMARY
           echo "- [Releases](https://github.com/${{ github.repository }}/releases)" >> $GITHUB_STEP_SUMMARY
           echo "- [Storybook](https://ooguzyuksel.github.io/react-timedown/)" >> $GITHUB_STEP_SUMMARY
 

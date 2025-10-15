@@ -58,18 +58,18 @@ jobs:
             ## Installation
             
             ```bash
-            npm install @ooguzyuksel/react-timedown@${{ github.ref_name }}
+            npm install react-timedown-ui@${{ github.ref_name }}
             ```
-            
+
             or
-            
+
             ```bash
-            yarn add @ooguzyuksel/react-timedown@${{ github.ref_name }}
+            yarn add react-timedown-ui@${{ github.ref_name }}
             ```
             
             ## Links
             
-            - 📦 [NPM Package](https://www.npmjs.com/package/@ooguzyuksel/react-timedown)
+            - 📦 [NPM Package](https://www.npmjs.com/package/react-timedown-ui)
             - 📚 [Documentation](https://ooguzyuksel.github.io/react-timedown/)
             - 🎨 [Storybook Examples](https://ooguzyuksel.github.io/react-timedown/)
           draft: false
